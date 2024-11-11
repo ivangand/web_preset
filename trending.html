@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trends - Align Motion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="home.html" class="text-2xl font-bold hover:text-gray-200">Align Motion</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="index.html" class="text-blue-200 font-semibold px-3 py-2 rounded-md">Home</a>
+                <a href="preset.html" class="text-white font-semibold px-3 py-2 rounded-md">Preset</a>
+                <a href="tutorial.html" class="hover:text-gray-200 px-3 py-2 rounded-md">Tutorial</a>
+                <a href="trending.html" class="hover:text-gray-200 px-3 py-2 rounded-md">Trend</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600">
+            <a href="index.html" class="block py-2 text-blue-200 font-semibold">Home</a>
+            <a href="preset.html" class="block py-2 text-white font-semibold">Preset</a>
+            <a href="tutorial.html" class="block py-2 hover:text-gray-200">Tutorial</a>
+            <a href="trending.html" class="block py-2 hover:text-gray-200">Trend</a>
+        </div>
+    </nav>
+
+    <!-- Trending Content -->
+    <main class="container mx-auto px-6 py-12">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Trending Align Motion</h2>
+        <p class="text-lg text-gray-700 text-center mb-8">Trending terbaru yang ada di Align Motion</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card Template (Repeat this for all 12 cards) -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:bg-blue-50 transition-all duration-300 hover-scale">
+                <img src="https://img.youtube.com/vi/y0aW0X9wJDM/hqdefault.jpg" alt="Video Thumbnail"
+                    class="rounded-lg mb-4 w-full h-48 object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-gray-800">Alight Motion Preset Pack</h4>
+                <p class="text-gray-600">Shake, Effect,Text,Overlay, Tunnel,CC for your edit</p>
+                <a href="https://youtu.be/y0aW0X9wJDM?si=pbZrCkk_HYyDSw03" target="_blank"
+                    class="text-blue-600 hover:underline mt-2 inline-block">Lihat Video</a>
+                <!-- Like and Comment Count -->
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        4,3k Likes
+                    </span>
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 22c5.52 0 10-3.58 10-8s-4.48-8-10-8S2 6.58 2 11s4.48 8 10 8z" />
+                        </svg>
+                        139 Comments
+                    </span>
+                </div>
+                <!-- Penonton Count -->
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M1.5 2.5c0-1.1.9-2 2-2h17c1.1 0 2 .9 2 2v19l-5-4H3.5c-1.1 0-2-.9-2-2v-13zm16 7h-8v2h8v-2zm-4-4H7v2h6V5z" />
+                        </svg>
+                        76k Views
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:bg-blue-50 transition-all duration-300 hover-scale">
+                <img src="https://img.youtube.com/vi/eviE9evMLWU/hqdefault.jpg" alt="Video Thumbnail"
+                    class="rounded-lg mb-4 w-full h-48 object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-gray-800">Alight motion effects</h4>
+                <p class="text-gray-600">10 popular alight motion effects ! ( preset )</p>
+                <a href="https://youtu.be/eviE9evMLWU?si=uFs-ayDnupzksSgJ" target="_blank"
+                    class="text-blue-600 hover:underline mt-2 inline-block">Lihat Video</a>
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        14k Likes
+                    </span>
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 22c5.52 0 10-3.58 10-8s-4.48-8-10-8S2 6.58 2 11s4.48 8 10 8z" />
+                        </svg>
+                        92 Comments
+                    </span>
+                </div>
+                <!-- Penonton Count -->
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M1.5 2.5c0-1.1.9-2 2-2h17c1.1 0 2 .9 2 2v19l-5-4H3.5c-1.1 0-2-.9-2-2v-13zm16 7h-8v2h8v-2zm-4-4H7v2h6V5z" />
+                        </svg>
+                        270k Views
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:bg-blue-50 transition-all duration-300 hover-scale">
+                <img src="https://img.youtube.com/vi/nIiSFzBWLBY/hqdefault.jpg" alt="Video Thumbnail"
+                    class="rounded-lg mb-4 w-full h-48 object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-gray-800">Alight Motion Terbaru MOD</h4>
+                <p class="text-gray-600">Alight Mod Terbaru No Bug Support 5MB</p>
+                <a href="https://youtu.be/nIiSFzBWLBY?si=8ltMXTDFwRvg7RTh" target="_blank"
+                    class="text-blue-600 hover:underline mt-2 inline-block">Lihat Video</a>
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        6k Likes
+                    </span>
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 22c5.52 0 10-3.58 10-8s-4.48-8-10-8S2 6.58 2 11s4.48 8 10 8z" />
+                        </svg>
+                        5,3k Comments
+                    </span>
+                </div>
+                <!-- Penonton Count -->
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M1.5 2.5c0-1.1.9-2 2-2h17c1.1 0 2 .9 2 2v19l-5-4H3.5c-1.1 0-2-.9-2-2v-13zm16 7h-8v2h8v-2zm-4-4H7v2h6V5z" />
+                        </svg>
+                        53k Views
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:bg-blue-50 transition-all duration-300 hover-scale">
+                <img src="https://img.youtube.com/vi/q6L2bVWSl8M/hqdefault.jpg" alt="Video Thumbnail"
+                    class="rounded-lg mb-4 w-full h-48 object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-gray-800">Tutorial Pemula</h4>
+                <p class="text-gray-600">Aplikasi Alight Motion Untuk Pemula </p>
+                <a href="https://youtu.be/q6L2bVWSl8M?si=Nqa5u8iCSew_V_H9" target="_blank"
+                    class="text-blue-600 hover:underline mt-2 inline-block">Lihat Video</a>
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        5k Likes
+                    </span>
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 22c5.52 0 10-3.58 10-8s-4.48-8-10-8S2 6.58 2 11s4.48 8 10 8z" />
+                        </svg>
+                        109 Comments
+                    </span>
+                </div>
+                <!-- Penonton Count -->
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M1.5 2.5c0-1.1.9-2 2-2h17c1.1 0 2 .9 2 2v19l-5-4H3.5c-1.1 0-2-.9-2-2v-13zm16 7h-8v2h8v-2zm-4-4H7v2h6V5z" />
+                        </svg>
+                        204k Views
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:bg-blue-50 transition-all duration-300 hover-scale">
+                <img src="https://img.youtube.com/vi/pps58fsZCrg/hqdefault.jpg" alt="Video Thumbnail"
+                    class="rounded-lg mb-4 w-full h-48 object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-gray-800">Edit tutorial</h4>
+                <p class="text-gray-600">Prime time baby trend edit Tutorial</p>
+                <a href="https://youtu.be/pps58fsZCrg?si=STNjNVkD6k7uJ667" target="_blank"
+                    class="text-blue-600 hover:underline mt-2 inline-block">Lihat video</a>
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        230 Likes
+                    </span>
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 22c5.52 0 10-3.58 10-8s-4.48-8-10-8S2 6.58 2 11s4.48 8 10 8z" />
+                        </svg>
+                        20 Comments
+                    </span>
+                </div>
+                <!-- Penonton Count -->
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M1.5 2.5c0-1.1.9-2 2-2h17c1.1 0 2 .9 2 2v19l-5-4H3.5c-1.1 0-2-.9-2-2v-13zm16 7h-8v2h8v-2zm-4-4H7v2h6V5z" />
+                        </svg>
+                        4,1k Views
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:bg-blue-50 transition-all duration-300 hover-scale">
+                <img src="https://img.youtube.com/vi/KQbR7lZzLfM/hqdefault.jpg" alt="Video Thumbnail"
+                    class="rounded-lg mb-4 w-full h-48 object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-gray-800">Effect Blur</h4>
+                <p class="text-gray-600">Smooth directional blur</p>
+                <a href="https://youtu.be/KQbR7lZzLfM?si=AGAFzN1zBcc4373y" target="_blank"
+                    class="text-blue-600 hover:underline mt-2 inline-block">Lihat Video</a>
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        9,1k Likes
+                    </span>
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 22c5.52 0 10-3.58 10-8s-4.48-8-10-8S2 6.58 2 11s4.48 8 10 8z" />
+                        </svg>
+                        87 Comments
+                    </span>
+                </div>
+                <!-- Penonton Count -->
+                <div class="flex items-center mt-4 space-x-6">
+                    <span class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M1.5 2.5c0-1.1.9-2 2-2h17c1.1 0 2 .9 2 2v19l-5-4H3.5c-1.1 0-2-.9-2-2v-13zm16 7h-8v2h8v-2zm-4-4H7v2h6V5z" />
+                        </svg>
+                        154k Views
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-6 md:py-8">
+        <div class="container mx-auto px-4 md:px-6 flex flex-wrap md:flex-nowrap justify-between items-center">
+            <p class="text-sm text-center md:text-left w-full md:w-auto">&copy; 2024 Align Motion. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
